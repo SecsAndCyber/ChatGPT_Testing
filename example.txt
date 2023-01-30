@@ -23,7 +23,7 @@ GET /_search
             "submitted_time": {
               "gte": "now-3d/d||/d",
               "lt": "now/d||/d",
-              "format": "yyyy-MM-dd' at 'HH:mm:ss"
+              "format": "MMM dd, yyyy '@' HH:mm:ss.SSS"
             }
           }
         }
