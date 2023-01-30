@@ -1,8 +1,24 @@
 GET /_search
 {
   "query": {
-    "match": {
-      "message": "chatbot"
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "message": "chatbot"
+          }
+        },
+        {
+          "nested": {
+            "path": "this.nested.twice",
+            "query": {
+              "match": {
+                "this.nested.twice.key": "ABC"
+              }
+            }
+          }
+        }
+      ]
     }
   }
 }
