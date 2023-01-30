@@ -21,8 +21,9 @@ GET /_search
         {
           "range": {
             "submitted_time": {
-              "gte": "now-3d/d",
-              "lt": "now/d"
+              "gte": "now-3d/d||/d",
+              "lt": "now/d||/d",
+              "format": "yyyy-MM-dd' at 'HH:mm:ss"
             }
           }
         }
