@@ -17,6 +17,14 @@ GET /_search
               }
             }
           }
+        },
+        {
+          "range": {
+            "submitted_time": {
+              "gte": "now-3d/d",
+              "lt": "now/d"
+            }
+          }
         }
       ]
     }
