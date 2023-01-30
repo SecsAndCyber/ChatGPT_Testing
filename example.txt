@@ -1,0 +1,9 @@
+GET /_search
+{
+  "query": {
+    "match": {
+      "message": "chatbot"
+    }
+  }
+}
+
