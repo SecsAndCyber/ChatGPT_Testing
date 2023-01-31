@@ -2,9 +2,20 @@
 <html>
   <head>
     <script>
-      // Your JavaScript code goes here
+      let file;
+      
+      function handleFileDrop(event) {
+        event.preventDefault();
+        file = event.dataTransfer.files[0];
+        console.log(file);
+      }
+      
+      function handleDragOver(event) {
+        event.preventDefault();
+      }
     </script>
   </head>
-  <body>
+  <body ondragover="handleDragOver(event)" ondrop="handleFileDrop(event)">
+    <p>Drop a file here to store as a JavaScript variable</p>
   </body>
 </html>
